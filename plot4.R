@@ -1,5 +1,5 @@
 
-plot1 <- function() {
+plot4 <- function() {
 ## Read the household power consumption data
 ## Convert the Data and Time columns to Date and POSIXCt respectively
 ## Subset the Data Frame to extract relevant Dates
@@ -24,9 +24,9 @@ plot1 <- function() {
 	reqdPCData$Sub_metering_2 <- as.numeric(reqdPCData$Sub_metering_2)
 	reqdPCData$Sub_metering_3 <- as.numeric(reqdPCData$Sub_metering_3)
 	
-	par(mfrow=c(2,2))
-	
+		
 	png(filename = "plot4.png", width = 480, height = 480, units = "px", pointsize = 12, bg = "white")
+	par(mfrow=c(2,2))
 
 	plot(reqdPCData$Time,reqdPCData$Global_active_power,"l",main="",xlab="",ylab="Global Active Power(kilowatts)")
 
